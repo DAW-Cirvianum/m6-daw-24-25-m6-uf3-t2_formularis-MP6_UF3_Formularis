@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemples de Formulari</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form
+      id="formulari"
+      action="https://www.google.com/search"
+      method="get"
+      target="_blank"
+    >
+      <label for="nif">NIF</label>
+      <input type="text" id="nif" name="q" placeholder="NIF" formnovalidate />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        novalidate
+      />
+      <input type="submit" value="Cercar" />
+    </form>
+    <script>
+      function validateForm(event) {
+        if (document.getElementById('nif').value === '') {
+          alert("Has d'introduir el NIF");
+          event.preventDefault();
+        }
+      }
+      document
+        .getElementById('formulari')
+        .addEventListener('submit', validateForm);
+    </script>
+  </body>
+</html>

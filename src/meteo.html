@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informació Meteorològica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quin temps fa?</h1>
+      <form id="weatherForm">
+        <label for="street">Carrer:</label>
+        <input type="text" id="street" />
+
+        <label for="city">Ciutat:</label>
+        <input type="text" id="city" required />
+
+        <label for="postalCode">Codi Postal:</label>
+        <input type="text" id="postalCode" />
+
+        <label for="country">País:</label>
+        <input type="text" id="country" />
+
+        <button type="submit">Obtenir Informació Meteorològica</button>
+      </form>
+
+      <div id="weatherResults" class="hidden">
+        <h2 id="location">Localització</h2>
+        <p id="location"></p>       
+        <div>
+          <h2>Informació Meteorològica</h2>
+          <p id="temperature"></p>
+          <p id="weatherDescription"></p>
+          <img id="weatherIcon" alt="Icona Meteorològica" />
+        </div
+
+
+        <div>
+          <h3>Previsió per Demà</h3>
+          <p id="forecastTemperature"></p>
+          <p id="forecastWeatherDescription"></p>
+          <img id="forecastWeatherIcon" alt="Icona Meteorològica Demà" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
